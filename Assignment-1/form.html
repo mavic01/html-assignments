@@ -21,6 +21,7 @@
         box-sizing: border-box;
         font-size: 1.6rem;
         font-family: 'Lato', sans-serif;
+        padding: 0 10px;
        }
         .container {
             display: flex;
@@ -43,6 +44,10 @@
         .image>img {
             height: 80vh;
             width: 100%;
+            object-fit: cover;
+        }
+        .head {
+            display: none;
         }
         .form {
             display: flex;
@@ -141,10 +146,37 @@
             .image span {
                 display: none;
             }
+            .form-header {
+                display: none;
+            }
+            
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 15px 0;
+            gap: 16px;
+        }
+        .head a {
+            display: none;
+        }
+        .head h3{
+            display: none;
+        }
+        .head span {
+            flex: 1;
+            margin-left: right;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
             }
         @media  screen and (max-width: 390px) {
             .form {
                 padding: 20px;
+            }
+            .form-header {
+                display: none;
             }
             button {
             display: block;
@@ -159,10 +191,35 @@
             margin-top: 8px;
             cursor: pointer;
         }
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 15px 0;
+            gap: 16px;
+        }
+        .head a {
+            text-decoration: none;
+            flex: 1;
+            font-size: 12px;
+            font-weight: bold;
+            border: 2px solid rgb(52, 59, 137);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 0;
+        }
         }
     </style>
 </head>
 <body>
+    <div class="head">
+        <a href="./index.html">HOME</a>
+        <h3>Already an AltSchooler?</h3>
+        <span>Sign In!</span>
+    </div>
     <div class="container">
         <section class="image">
             <img src="asset/academic_zzg4hi.jpg" alt="learning-image">
